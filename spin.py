@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-#  Combine SSE files efficiently
+#  Combine SSE files
 def combine_sse_files(input_file1, input_file2, out_file):
     
     files = [input_file1, input_file2]
@@ -18,7 +18,7 @@ def combine_sse_files(input_file1, input_file2, out_file):
     return out_file
     
 
-# Spin classification logic (optimized inner loop)
+# Spin classification 
 def classify_spin(data, out_file):
     f = open(out_file, "w")
     f.write("#name,actual_spin,actual_spin_mult,actual 1st_excited-GS:energygap,"
@@ -40,7 +40,7 @@ def classify_spin(data, out_file):
             if s2["state"] != s1["state"] + 2:
                 continue
 
-            # Extract values for readability
+            # Extract values 
             actual1, actual2 = s1["actual"], s2["actual"]
             pred1, pred2 = s1["predicted"], s2["predicted"]
             sstate = s1["state"]
