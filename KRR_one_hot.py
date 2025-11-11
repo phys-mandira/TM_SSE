@@ -2,9 +2,6 @@ import numpy as np
 import pandas as pd 
 import matplotlib.pyplot as plt
 from numpy.polynomial.polynomial import polyfit
-#import seaborn as sns
-import warnings 
-warnings.filterwarnings('ignore')
 import os
 import joblib
 
